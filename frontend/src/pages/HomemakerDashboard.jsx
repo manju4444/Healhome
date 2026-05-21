@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import api from '../api'
 import { io } from 'socket.io-client'
 
-const socket = io('http://localhost:5000')
+const socket = io('https://healhome-backend.onrender.com')
 
 const STATUS_META = {
   pending:    { color:'#fbbf24', label:'⏳ Pending',    border:'rgba(251,191,36,0.3)' },
