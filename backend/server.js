@@ -4,7 +4,12 @@ dns.setDefaultResultOrder('ipv4first');
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const http = require('http');
+const https = require('https')
+setInterval(() => {
+  https.get('https://healhome-backend.onrender.com/', () => {
+    console.log('Server kept alive ✅')
+  }).on('error', () => {})
+}, 14 * 60 * 1000)
 const { Server } = require('socket.io');
 require('dotenv').config();
 
