@@ -1,6 +1,4 @@
-const dns = require('dns');
-dns.setServers(['8.8.8.8', '8.8.4.4']);
-dns.setDefaultResultOrder('ipv4first');
+
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
@@ -14,7 +12,7 @@ const { Server } = require('socket.io');
 require('dotenv').config();
 
 const app = express();
-const server = http.createServer(app);
+const server = https.createServer(app);
 
 const io = new Server(server, {
   cors: { origin: 'http://localhost:5173', methods: ['GET', 'POST'] }
